@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result" style="font-size: 30px; text-align: center;">
+
+    </div>
+</body>
+<script>
+    for (var i = 0 ; i<=2; i++){
+        if (i % 2 == 0 ){
+            
+            console.log(i)
+        }
+        
+    }
+
+    for( var i = 0 ; i<=30;i++){
+        document.getElementById("result").innerHTML += `10 x ${i} = ${i*10} </br>`
+        
+    }
+
+    var name = "Welcome"
+    for (var i in name ){
+        console.log(name[i])
+    }
+
+    for (var i of name ){
+        console.log(i)
+    }
+</script>
+</html>

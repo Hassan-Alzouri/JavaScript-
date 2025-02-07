@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="students" style="color: red;">
+
+    </div>
+</body>
+<script>
+    var i = 0
+    while(i < 10){
+        console.log(i)
+        i++
+
+    }  
+    var i = 0
+    do{
+        console.log(i)
+        i++
+    }while(i<5 )
+
+    // 2D Array 
+    var numbers = [
+        [7,8,9],
+        [4,5,6],
+        [1,2,3],
+        [0,0.1,0.01]
+    ]
+
+    console.log(numbers[2][0])
+
+    
+    for(var i=0;i<numbers.length;i++){
+
+        var currentclass = numbers[i]
+    document.getElementById("students").innerHTML += "<br>" + `<h1> Class ${i+1}</h1>`  + "<hr>"
+        for( var j = 0;j<currentclass.length;j++){
+            var currentnumbers = currentclass[j]
+            document.getElementById("students").innerHTML += currentnumbers + "--"
+
+        }
+
+
+    }
+    
+</script>
+</html>

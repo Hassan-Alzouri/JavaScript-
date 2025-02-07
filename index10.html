@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcation</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function printWelcomeMassage (){
+       console .log("Welccome Hassan")
+       console .log("Welccome to zouri web")
+       console .log("How are you ?")
+    }
+
+    printWelcomeMassage()
+
+    // Funcation with Parameters
+    function printWelcomeMassage (name){
+       console .log("Welccome" + " " + name)
+       console .log("Welccome to zouri web")
+       console .log("How are you ?")
+    }
+
+    printWelcomeMassage ("Ali")
+
+    // Multiple Parameters
+    function numberSquare (number1 ,number2){
+        var result = number1 * number2
+        console.log("THe result is :"+result)
+
+    }
+
+    numberSquare(25,5)
+
+    // Funcation With Returned Values
+    function numberSquared (number1 =20 ,number2 =10){
+        var result = number1 * number2
+        return result
+    }
+
+    console.log(numberSquared(5,5))
+
+    var x = numberSquared()
+    console.log(x)
+
+    //***************************
+    function reverArray (arr=[10,20,30,40]){
+        var outputArray = []
+        for(element of arr){
+            outputArray.unshift(element)
+        }
+        return outputArray
+    }
+
+    console.log(reverArray())
+
+    var myArray = ["hassan",true,10]
+    var reverseArray = reverArray(myArray)
+    console.log(reverseArray)
+
+
+    // Arrow Funcations
+    var y = () => {
+        console.log("Hi => ")
+    }
+    y()
+    
+
+</script>
+</html>

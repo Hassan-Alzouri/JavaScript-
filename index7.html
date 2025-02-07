@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+</head>
+<body>
+    <div style="text-align: center;font-size: 50px;">
+        Find GYM Members 
+        <br>
+        <input id="member-input" type="text">
+        <button id="search"">Search</button>
+    </div>
+
+    <div id="gym" style="font-size: 20px;text-align: center;"></div>
+    <h2 id="result" style="text-align: center;"></h2>
+</body>
+<script>
+    var gym = ["Hassan" , "Ali" , "Mohammed" , "Ahmad" ,"Rayan","Abood","Reco"]
+    for(var memberIndex = 0 ; memberIndex <= gym.length -1 ; memberIndex++){
+        document.getElementById("gym").innerHTML += gym[memberIndex] + "--"
+    }
+
+    document.getElementById("search").addEventListener("click",function(){
+       
+       var name = document.getElementById("member-input").value.toLowerCase()
+       
+       var isFound = false
+       
+       for (var member of gym){
+          
+            var lowerMember = member.toLocaleLowerCase()
+            if(name == lowerMember){
+                isFound = true 
+            }
+       }
+
+       if(isFound == true ){
+            document.getElementById("result").innerHTML = `${name} is in the GYM`
+       }else{
+            document.getElementById("result").innerHTML = `${name} is Not in the GYM`
+       }
+    })
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+
+
+    <div style="color: white;width: 100%;height: 50vh;font-size: 40px;background-color: rgb(0, 255, 255);">
+        <div style="display: flex;justify-content: center;align-items: center;height: 50%;">
+            <div style="height: 40px;">
+                <input onchange="nameInputChange(this)" type="text" id="name-input" style="height: 100%;width: 300px;border: none;">
+                <button id="submit-btn" style="border: none;background: white;height: 100%;width: 100px;">Submit</button>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <h3 id="currentName" style="color: darkblue;">Hassan</h3>
+        </div>
+    </div>
+
+    <div style="color: black;display: flex;justify-content: center;align-items: center;width: 100%;font-size: 40px;height: 50vh;">
+        <h2 id="massage">Place Enter name</h2>
+    </div>
+
+<style> 
+</style>
+</head>
+<body>
+    
+</body>
+<script>
+    let massageElement = document.getElementById("massage")
+    let isSubmited = false  
+
+    function nameInputChange(input){
+        document.getElementById("currentName").innerHTML = input.value
+    }
+
+    document.getElementById("submit-btn").addEventListener("click",function(){
+        if(!isSubmited){
+            isSubmited =true
+            massageElement.innerHTML = ""
+        }
+        
+
+        let value = document.getElementById("name-input").value
+
+        let textNode = document.createTextNode(value)
+
+        massageElement.appendChild(textNode)
+
+        let brElemnt = document.createElement("br")
+
+        massageElement.appendChild(brElemnt)
+    })
+
+    massageElement.addEventListener("mouseover",function(){
+        if(isSubmited){
+            this.style.background = `green`
+        }else{
+            this.style.background = `red`
+        }
+    })
+
+    massageElement.addEventListener("mouseout",function(){
+        this.style.background = `white`
+    })
+</script>
+</html>

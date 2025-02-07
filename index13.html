@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // object
+    let student = {
+       firestName: "Hassan",
+       lasttName: "Alzouri",
+       age: 21,
+       year: "2021",
+       printFullName:function(){
+            console.log(this.firestName + " " + this.lasttName);
+       }
+    }
+
+    //function printFullName(st){
+        //console.log(st.firestName + " " + lasttName);
+   // }
+
+    //console.log(student)
+    //console.log(student.age)
+    //printFullName(student)
+    student.printFullName()
+
+    // change the key
+    console.log(student.year)
+
+    student.year = "2003"
+    console.log(student.year)
+
+    // Add new key
+    student.grade = "A+"
+    console.log(student.grade)
+
+    // object in array
+    let students = [
+    {
+       firestName: "Hassan",
+       lasttName: "Alzouri",
+       age: 21,
+       year: "2021",
+       printFullName:function(){
+            console.log(this.firestName + " " + this.lasttName);
+       }
+        },
+       {
+       firestName: "Ali",
+       lasttName: "Alzouri",
+       age: 21,
+       year: "2021",
+       printFullName:function(){
+            console.log(this.firestName + " " + this.lasttName);
+       }
+    }
+    ]
+
+    console.log(students)
+    console.log(students[1])
+    console.log(students[1].firestName)
+    console.log(students[1].printFullName())
+
+    // Nested Object 
+    let employ = [
+    {
+       name:{
+        firestName: "Hassan",
+        lasttName: "Alzouri"
+       },
+       age: 21,
+       year: "2021",
+       printFullName:function(){
+            console.log(this.firestName + " " + this.lasttName);
+       },
+       courses:["math","oop"],
+       courses1:[{name:"math",credits:4},{name:"oop",credits:3}]
+        }
+    ]
+    console.log(employ[0].name.lasttName)
+
+    // Desrtucturing Assignment
+    let st = {
+        name:"Ali",
+        age:22
+    }
+
+    // Nomrmal Without using Desrtucturing Assignment
+    //let name = st.name
+    //let age = st.age
+   // console.log(name,age)
+
+   // Desrtucturing Assignment in object
+    let {name,age} = st
+    console.log(name,age)
+
+    // Desrtucturing Assignment in Array
+    var arr = [10,20,30]
+    let [first,second,third] = arr
+    console.log(first,second,third)
+
+
+
+
+</script>
+</html>

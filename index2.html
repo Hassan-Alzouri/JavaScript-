@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="string-input" type="text" value="text here">
+    <button id="submit-btn">Submit</button>
+    <h3 id="result"></h3>
+</body>
+
+<script>
+    document.getElementById("submit-btn").addEventListener("click",function(){
+        //console.log("click")
+        var mystr = document.getElementById("string-input").value
+        console.log(mystr)
+        var allcaps = mystr.toUpperCase()
+        var replace0 = allcaps.replace("0","Y")
+        var reversStr = replace0.split("").reverse().join("");
+
+        document.getElementById("result").innerHTML = `${allcaps} --- ${replace0} --- ${reversStr}`;    })
+
+
+        var age = 33
+
+        if(age >= 50 ){
+            console.log("Old and the age is:" + age)
+        }else if(age >= 30){
+            console.log("Hhhh" )
+        }else{
+            console.log("Habibi")
+        }
+
+        var health = "Strong"
+
+        switch(health){
+            case("Strong"):
+                console.log("Your health is good")
+                break
+            case("Weak"):
+                console.log("You need to work on your health")
+                break
+            default:
+                console.log("Good")
+        }
+</script>
+</html>

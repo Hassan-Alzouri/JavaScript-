@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="students" style="font-size: 30px;"></div>
+</body>
+<script>
+    
+    var students = ["Hassan","Ali","Mohammed","Ahmad","Salman"]
+    document.getElementById("students").innerHTML = students
+
+    students.push("Ryan")
+
+    students[3] = "Mrad"
+    console.log(students[5])
+    console.log(students)
+
+    students.pop()
+
+    console.log(students)
+
+    students.splice(3,1,"Hassan")
+    console.log(students)
+
+    var arr = [10,20,50,100,90,40,70]
+    
+    console.log(Array.isArray(arr))
+    console.log(arr.includes(40))
+    console.log(arr.indexOf(50))
+    console.log(arr.shift()) // delete the first element
+    console.log(arr.unshift(400))
+    console.log(arr)
+    console.log(arr.reverse())
+    console.log(arr)
+
+</script>
+</html>

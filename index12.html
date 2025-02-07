@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   var arr = [10,20,30,40,50] 
+
+   // Map :
+   // The Result Array
+   // it will index in each element then you can do what ever you whant to do in array element
+   let myarr = arr.map(function(element){
+        return element*10
+   })
+
+   console.log(myarr)
+
+
+   // Filter :
+   // The Result Array
+   // same funcation of Map But you should return True/False
+   // You can return True when it index in the element you want
+   let myArr = arr.filter((element) =>{
+            // retrn the values of each element > 35 
+            return element > 35
+   })
+
+   console.log(myArr)
+    
+   // Reduce :
+   // The Result Number
+   var total = arr.reduce((prevValue,currentValue) =>{
+        return prevValue + currentValue
+   })
+   console.log(total)
+  
+</script>
+</html>

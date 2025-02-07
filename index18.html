@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+    <div style="display: flex;justify-content: center;align-items: center;width: 100%;font-size:40px;">
+        <h2 onclick="alert(`Hello world`)" id="title">Hassan Alzourei</h2>
+        <br>
+        <h3 onclick="this.innerHTML = `Hi Ali`" id="title">Ali Alzourei</h3>
+        <br>
+        <h4 onclick="changeTitle2()" id="title-2">Test</h4>
+    </div>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    function changeTitle2(){
+        document.getElementById("title-2").innerHTML = "Title 2"
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Lisener</title>
+
+    <div style="display: flex;justify-content: center;align-items: center;width: 100%;font-size:40px;">
+        <h2  id="title">Hassan Alzourei</h2>
+        <h3 id="title-2">Test</h3>
+    </div>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    document.getElementById("title").addEventListener("mouseover",function(){
+        document.getElementById("title-2").innerHTML = "Hi Hassan"
+        //this.innerHTML = "Hello Hassan"
+    })
+    document.getElementById("title").addEventListener("mouseout",function(){
+        document.getElementById("title-2").innerHTML = "Hello world"
+    })
+</script>
+</html>

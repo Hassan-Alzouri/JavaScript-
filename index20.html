@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+
+    <div style="color: white;width: 100%;font-size: 40px;height: 50vh;background-color:rgb(0, 0, 73) ;">
+        <ul id="ul">
+            <li>Hassan</li>
+            <li>Ali</li>           
+            <li id="Mohammed-li">Mohammed</li>
+        </ul>
+    </div>
+</head>
+<body>
+    
+</body>
+<script>
+    //document.getElementById("ul").innerHTML += "<li>Salman</li>"
+    let liElement = document.createElement("li")
+    let textContent = document.createTextNode("Morad")
+    liElement.appendChild(textContent)
+    document.getElementById("ul").appendChild(liElement)
+    document.getElementById("ul").removeChild(liElement) 
+    let mohammedNode = document.getElementById("Mohammed-li")
+    document.getElementById("ul").removeChild(mohammedNode)
+</script>
+</html>
